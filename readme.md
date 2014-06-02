@@ -1,17 +1,19 @@
+### 0. Install Node.js and Ruby
+
 ### 1. Clone this repo
 
 	git clone https://github.com/branneman/grunt-scss-lint-test.git
 	cd grunt-scss-lint-test
 
-### 2. Install dependencies
+### 2. Install global dependencies
 
-	gem install sass scss-lint bundler
-	npm install -g grunt-cli
+    npm install -g grunt-cli
+	gem install bundle
+
+### 3. Install project-specific dependencies
+
 	npm install
-
-### 3. On Windows, install some more dependencies
-
-	gem install windows-pr win32console
+	bundle install
 
 ### 4. Validate that scss-lint is installed
 
