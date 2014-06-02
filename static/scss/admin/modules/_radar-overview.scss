@@ -1,0 +1,39 @@
+.radar-overview {
+    margin: 0;
+    padding: 0;
+    > li {
+        list-style: none;
+        padding-bottom: $gutter;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .radar-title {
+        margin-bottom: 0;
+    }
+
+    .activate-star {
+        font-family: Courier;
+        font-weight: normal;
+        &.active {
+            color: goldenrod;
+        }
+        &.inactive {
+            color: lightgray;
+        }
+    }
+
+    .sub-title {
+        margin: 0 0 .5em 0;
+        font-style: italic;
+    }
+
+    .actions {
+        margin: 0;
+        padding: 0;
+        > li {
+            list-style: none;
+            display: inline-block;
+            margin: 0;
+        }
+    }
+}

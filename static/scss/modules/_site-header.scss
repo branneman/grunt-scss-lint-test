@@ -1,0 +1,131 @@
+.basic-ui {
+    .site-header {
+        position: relative;
+
+        .site-title p {
+            display: none;
+        }
+
+        .site-title p::before {
+            content: 'Editie: ';
+        }
+
+        .logo {
+            display: none;
+        }
+    }
+}
+.basic-ui.has-js .site-header .site-title p {
+    display: block;
+}
+
+
+@media all and (min-width: 27em) {
+
+    .basic-ui .site-header .logo {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        text-align: right;
+
+        img {
+            width: 60%;
+        }
+
+        figcaption {
+            display: none;
+        }
+    }
+}
+
+.enhanced-ui {
+
+    .site-header {
+        text-align: center;
+        position: relative;
+
+        nav {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+
+            input {
+                border-radius: 3px;
+                border: 1px solid $border-primary;
+                padding: 10px 8px 6px;
+                color: $color-secondary;
+
+                &::-ms-clear {
+                    display: none;
+                }
+            }
+
+            label, a {
+                display: inline-block;
+                margin-right: -4px;
+                background-repeat: no-repeat;
+                background-position: 0 50%;
+                background-size: 19px 19px;
+                padding-left: 25px;
+                color: $color-secondary;
+                line-height: 19px;
+            }
+
+            label {
+                background-image: url(../img/icon-search.svg);
+                margin-left: 15px;
+                margin-right: 10px;
+            }
+
+            a {
+                background-image: url(../img/icon-help.svg);
+                padding-right: 15px;
+                text-decoration: none;
+                border-right: 1px solid $border-secondary;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .clear-filter {
+                position: absolute;
+                top: -2px;
+                right: 0;
+                width: 28px;
+                height: 30px;
+                padding: 0;
+                border: 0;
+                background: transparent;
+                font-size: 26px;
+                font-weight: bold;
+                color: #999;
+            }
+        }
+    }
+
+    .site-title {
+        margin: 40px auto;
+
+        h1, p {
+            margin: 0;
+        }
+    }
+
+    .logo {
+        position: absolute;
+        left: 40px;
+        top: 40px;
+
+        img {
+            width: 168px;
+            vertical-align: top;
+        }
+
+        figcaption {
+            display: none;
+        }
+    }
+
+}

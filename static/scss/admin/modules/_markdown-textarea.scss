@@ -1,0 +1,24 @@
+.markdown-textarea {
+    position: relative;
+
+    textarea,
+    .rendered {
+        margin-bottom: 25px;
+    }
+    .rendered {
+        display: none;
+        background: #fcfcfc;
+        overflow-y: scroll;
+    }
+
+    .controls {
+        position: absolute;
+        top: 309px;
+
+        .code,
+        .render {
+            border-top: 0;
+            border-radius: 0 0 4px 4px;
+        }
+    }
+}

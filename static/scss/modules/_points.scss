@@ -1,0 +1,168 @@
+.basic-ui {
+    .points {
+        padding: 0;
+
+        & > li {
+            list-style: none;
+            margin-bottom: 20px;
+
+            padding-bottom: 20px;
+            border-bottom: 1px solid lightgrey;
+
+            h3 {
+                font-size: 16px;
+            }
+
+            .point-rings {
+                th::after {
+                    content: ':';
+                }
+            }
+        }
+    }
+}
+
+.enhanced-ui .col-list {
+
+    h2.products {
+        color: $products;
+    }
+    h2.tools-platforms {
+        color: $tools-platforms;
+    }
+    h2.languages-frameworks {
+        color: $languages-frameworks;
+    }
+    h2.techniques {
+        color: $techniques;
+    }
+
+    h3 {
+        display: inline;
+        font-weight: normal;
+        cursor: pointer;
+    }
+
+    .points {
+        margin: 0 0 36px;
+        padding: 0;
+        font-size: 13px;
+        list-style-position: inside;
+
+        li {
+            position: relative;
+            height: 18px;
+            list-style: none;
+            border-left: 3px solid;
+
+            & > h3 {
+                position: absolute;
+                left: 10px;
+                right: 0;
+
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            &::before {
+                position: absolute;
+                top: -18px;
+                left: -2px;
+                right: 0;
+
+                color: $background-dark;
+                text-align: right;
+
+                // translate3d() fixes webkit's quirky font rendering of rotated text
+                -webkit-transform: rotate(-90deg) translate(-100%, 0) translate3d(0, 0, 0);
+                    -ms-transform: rotate(-90deg) translate(-100%, 0) translate3d(0, 0, 0);
+                     -o-transform: rotate(-90deg) translate(-100%, 0) translate3d(0, 0, 0);
+                        transform: rotate(-90deg) translate(-100%, 0) translate3d(0, 0, 0);
+
+                -webkit-transform-origin: 0 100%;
+                    -ms-transform-origin: 0 100%;
+                     -o-transform-origin: 0 100%;
+                        transform-origin: 0 100%;
+            }
+            &.adopt ~ .adopt::before,
+            &.trial ~ .trial::before,
+            &.assess ~ .assess::before,
+            &.hold ~ .hold::before {
+                content: none;
+            }
+            &.adopt::before {
+                content: 'Adopt';
+            }
+            &.trial::before {
+                content: 'Trial';
+            }
+            &.assess::before {
+                content: 'Assess';
+            }
+            &.hold::before {
+                content: 'Hold';
+            }
+        }
+        .adopt {
+            border-color: $background-dark;
+        }
+        .trial {
+            border-color: $background-medium;
+        }
+        .assess {
+            border-color: $background-light;
+        }
+        .hold {
+            border-color: $background-lighter;
+        }
+        .adopt + .trial,
+        .adopt + .assess,
+        .adopt + .hold,
+        .trial + .assess,
+        .trial + .hold,
+        .assess + .hold {
+            margin-top: 7px;
+        }
+
+        &.products .just-changed .point-name {
+            border-bottom: 1px solid lighten($products-highlight, 20%);
+        }
+        &.tools-platforms .just-changed .point-name {
+            border-bottom: 1px solid lighten($tools-platforms-highlight, 20%);
+        }
+        &.languages-frameworks .just-changed .point-name {
+            border-bottom: 1px solid lighten($languages-frameworks-highlight, 20%);
+        }
+        &.techniques .just-changed .point-name {
+            border-bottom: 1px solid lighten($techniques-highlight, 20%);
+        }
+
+        h3:hover .point-name,
+        h3.hover .point-name {
+            font-weight: bold;
+        }
+
+        &.products h3:hover .point-name,
+        &.products h3.hover .point-name {
+            color: $products-highlight;
+        }
+        &.tools-platforms h3:hover .point-name,
+        &.tools-platforms h3.hover .point-name {
+            color: $tools-platforms-highlight;
+        }
+        &.languages-frameworks h3:hover .point-name,
+        &.languages-frameworks h3.hover .point-name {
+            color: $languages-frameworks-highlight;
+        }
+        &.techniques h3:hover .point-name,
+        &.techniques h3.hover .point-name {
+            color: $techniques-highlight;
+        }
+    }
+}
+
+// Hide ring labels when we're filtering
+.enhanced-ui .filtering .col-list .points li::before {
+    content: none;
+}

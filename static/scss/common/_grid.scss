@@ -1,0 +1,53 @@
+$gutter: 40px;
+
+.basic-ui {
+
+    .site-header,
+    main {
+        max-width: 45em;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .site-header {
+        margin-top: 20px;
+
+        nav {
+            display: none;
+        }
+    }
+}
+
+.enhanced-ui {
+
+    .site-header,
+    main {
+        > * {
+            -moz-box-sizing: border-box;
+                 box-sizing: border-box;
+            display: inline-block;
+            margin-right: -4px;
+            vertical-align: top;
+        }
+    }
+
+    main {
+        .col-list {
+            width: 15%;
+            padding-left: $gutter;
+
+            & ~ .col-list {
+                padding-right: $gutter;
+                padding-left: 0;
+            }
+            .point-content {
+                display: none;
+            }
+        }
+        .col-radar {
+            width: 70%;
+            padding: $gutter;
+        }
+    }
+
+}

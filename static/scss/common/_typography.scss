@@ -1,0 +1,77 @@
+/**
+ * Typeface definitions
+ */
+@font-face {
+    font-family: 'Frutiger';
+    src: url('/static/fonts/frutiger-light.eot?#iefix');
+    src: url('/static/fonts/frutiger-light.eot?#iefix') format('eot'),
+         url('/static/fonts/frutiger-light.woff') format('woff'),
+         url('/static/fonts/frutiger-light.ttf') format('truetype'),
+         url('/static/fonts/frutiger-light.svg#frutiger-light') format('svg');
+}
+@font-face {
+    font-family: 'Frutiger';
+    font-weight: bold;
+    src: url('/static/fonts/frutiger-blackcn.eot?#iefix');
+    src: url('/static/fonts/frutiger-blackcn.eot?#iefix') format('eot'),
+         url('/static/fonts/frutiger-blackcn.woff') format('woff'),
+         url('/static/fonts/frutiger-blackcn.ttf') format('truetype'),
+         url('/static/fonts/frutiger-blackcn.svg#frutiger-blackcn') format('svg');
+}
+@font-face {
+    font-family: 'FrutigerBold';
+    src: url('/static/fonts/frutiger-bold.eot?#iefix');
+    src: url('/static/fonts/frutiger-bold.eot?#iefix') format('eot'),
+         url('/static/fonts/frutiger-bold.woff') format('woff'),
+         url('/static/fonts/frutiger-bold.ttf') format('truetype'),
+         url('/static/fonts/frutiger-bold.svg#frutiger-blackcn') format('svg');
+}
+$frutiger: 'Frutiger', Helvetica, Arial, sans-serif;
+$frutiger-bold: 'FrutigerBold', Helvetica, Arial, sans-serif;
+
+/**
+ * Color definitions
+ */
+$highlight-amount:                  10%;
+$products:                          #889928;
+$products-highlight:                lighten($products, $highlight-amount);
+$tools-platforms:                   #e4365f;
+$tools-platforms-highlight:         lighten($tools-platforms, $highlight-amount);
+$languages-frameworks:              #82658d;
+$languages-frameworks-highlight:    lighten($languages-frameworks, $highlight-amount);
+$techniques:                        #9d7448;
+$techniques-highlight:              lighten($techniques, $highlight-amount);
+
+$color-primary:                     #000;
+$color-secondary:                   #535353;
+$color-white:                       #fff;
+
+$border-primary:                    #bbb;
+$border-secondary:                  #7f7f7f;
+
+$background-lighter:                #f6f6f6;
+$background-light:                  #f0f0f0;
+$background-medium:                 #ddd;
+$background-dark:                   #c1c1c1;
+
+/**
+ * Basic typography styles
+ */
+body {
+    font-family: $frutiger;
+    font-size: 13px;
+    line-height: 1.4;
+}
+h1 {
+    font-size: 25px;
+    margin: 0;
+}
+h2 {
+    font-size: 19px;
+    margin: 0 0 18px;
+}
+h3 {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+}

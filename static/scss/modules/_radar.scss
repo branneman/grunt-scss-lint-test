@@ -1,0 +1,77 @@
+.basic-ui .col-radar {
+    display: none;
+}
+
+.enhanced-ui #radar {
+    .radar {
+        circle {
+            stroke: #fff;
+            stroke-width: 1.5;
+        }
+        line {
+            stroke: #5a5a5a;
+            stroke-width: 1;
+            stroke-dasharray: 9, 3;
+        }
+        text {
+            letter-spacing: 2px;
+            text-anchor: middle;
+            fill: #333;
+        }
+    }
+    .points {
+        circle, .triangle, text {
+            cursor: pointer;
+        }
+        circle.products {
+            fill: $products-highlight;
+        }
+        circle.tools-platforms {
+            fill: $tools-platforms-highlight;
+        }
+        circle.languages-frameworks {
+            fill: $languages-frameworks-highlight;
+        }
+        circle.techniques {
+            fill: $techniques-highlight;
+        }
+        .triangle.products {
+            fill: darken($products-highlight, 20%);
+        }
+        .triangle.tools-platforms {
+            fill: darken($tools-platforms-highlight, 20%);
+        }
+        .triangle.languages-frameworks {
+            fill: darken($languages-frameworks-highlight, 20%);
+        }
+        .triangle.techniques {
+            fill: darken($techniques-highlight, 20%);
+        }
+        text {
+            fill: #fff;
+            font-family: Arial;
+            font-size: 11px;
+            text-anchor: middle;
+        }
+
+        g:hover,
+        g.hover {
+            circle,
+            .triangle {
+                fill: #fff;
+            }
+            .products + text {
+                fill: $products-highlight;
+            }
+            .tools-platforms + text {
+                fill: $tools-platforms-highlight;
+            }
+            .languages-frameworks + text {
+                fill: $languages-frameworks-highlight;
+            }
+            .techniques + text {
+                fill: $techniques-highlight;
+            }
+        }
+    }
+}

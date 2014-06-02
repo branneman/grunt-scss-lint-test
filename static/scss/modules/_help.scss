@@ -1,0 +1,40 @@
+.basic-ui {
+    .help-content {
+        margin-bottom: 20px;
+        padding: 20px 0 10px;
+        border: solid lightgrey;
+        border-width: 1px 0;
+    }
+    h3 {
+        font-size: 19px;
+    }
+}
+
+.enhanced-ui {
+
+    .help-content {
+        display: none;
+    }
+
+    .dialog.help {
+        left: 25%;
+        right: 25%;
+
+        div {
+            padding-right: 0;
+        }
+
+        h3 {
+            position: static;
+            text-align: left;
+        }
+
+        p:first-of-type {
+            margin-top: $gutter / 2;
+        }
+
+        button {
+            background: $color-primary;
+        }
+    }
+}

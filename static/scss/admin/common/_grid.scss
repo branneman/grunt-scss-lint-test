@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: $background;
+}
+.outer {
+    max-width: 60em;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: $gutter;
+    background: white;
+
+    &.login {
+        max-width: 30em;
+    }
+}

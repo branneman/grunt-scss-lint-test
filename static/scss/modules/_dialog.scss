@@ -1,0 +1,175 @@
+.basic-ui .dialog {
+    display: none;
+}
+
+.enhanced-ui .dialog {
+
+    display: none;
+    &.show {
+        display: block;
+    }
+
+    &.overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .25);
+        cursor: pointer;
+    }
+
+    &.content {
+        position: absolute;
+        top: 10%;
+        left: 17.5%;
+        right: 17.5%;
+        min-height: 320px;
+        margin-bottom: 120px;
+        padding: 50px;
+        background: #fff;
+        border-radius: 6px;
+
+        & > div {
+            padding-right: 50%;
+        }
+
+        h3,
+        h4.quadrant {
+            position: absolute;
+            top: 50px;
+            margin: 0;
+        }
+
+        h3 {
+            left: 0;
+            right: 0;
+            font-size: 25px;
+            text-align: center;
+        }
+        h4.quadrant {
+            left: 50px;
+            font-size: 17px;
+            font-weight: normal;
+        }
+
+        .products h3,
+        .products h4.quadrant {
+            color: $products;
+        }
+        .tools-platforms h3,
+        .tools-platforms h4.quadrant {
+            color: $tools-platforms;
+        }
+        .languages-frameworks h3,
+        .languages-frameworks h4.quadrant {
+            color: $languages-frameworks;
+        }
+        .techniques h3,
+        .techniques h4.quadrant {
+            color: $techniques;
+        }
+
+        p b,
+        p b a {
+            color: #555;
+        }
+
+        button {
+            position: absolute;
+            top: $gutter;
+            right: -28px;
+            width: 28px;
+            height: 30px;
+            border: 0;
+            color: #fff;
+            text-indent: -9999px;
+            font-weight: bold;
+
+            &::after {
+                content: '×';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                color: #fff;
+                font-size: 26px;
+                line-height: 1;
+                text-indent: 0;
+            }
+        }
+
+        .products + button {
+            background: $products;
+        }
+        .tools-platforms + button {
+            background: $tools-platforms;
+        }
+        .languages-frameworks + button {
+            background: $languages-frameworks;
+        }
+        .techniques + button {
+            background: $techniques;
+        }
+
+        .point-content {
+
+            h4, h5, h6 {
+                margin-bottom: 0;
+                font-size: 13px;
+                color: #555;
+            }
+            p {
+                margin-top: 0;
+            }
+            p.owner {
+                margin-top: $gutter * 2;
+                margin-bottom: 0;
+            }
+
+            table {
+                position: absolute;
+                top: 130px;
+                right: 50px;
+                th, td {
+                    padding-bottom: 25px;
+                }
+                th {
+                    padding-right: 30px;
+                    font-weight: normal;
+                    text-align: right;
+                    a {
+                        color: #000;
+                        text-decoration: none;
+                        &:hover,
+                        &:focus {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                span {
+                    display: block;
+                    border-radius: 4px;
+                    font-family: $frutiger-bold;
+                    text-align: center;
+                    line-height: 2;
+                    padding: 0 8px;
+                    &.hold {
+                        background-color: $background-lighter;
+                    }
+                    &.assess {
+                        background-color: $background-light;
+                    }
+                    &.trial {
+                        background-color: $background-medium;
+                    }
+                    &.adopt {
+                        background-color: $background-dark;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}
