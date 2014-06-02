@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         scsslint: {
             options: {
                 config: 'static/scss/.scss-lint.yml',
-                colorizeOutput: true
+                colorizeOutput: true // On Windows, run: `gem install windows-pr win32console`
             },
             build: [
                 'static/scss/**/*.scss'
